@@ -7,11 +7,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LandingTester.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dad/Dad.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallShadow.cs" />
+        <option value="$PROJECT_DIR$/Assets/LandingTester.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ball/AccuracyCircle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dad/Dad.cs" />
       </list>
     </option>
   </component>
@@ -60,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660363283046</updated>
-      <workItem from="1660363302381" duration="6841000" />
+      <workItem from="1660363302381" duration="18320000" />
     </task>
     <servers />
   </component>
@@ -71,5 +80,11 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1660465614292">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/-1920.362.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1660465614292" />
   </component>
 </project>

@@ -7,9 +7,15 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="LandingTester.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Ball" t="Include">
+            <e p="AccuracyCircle.cs" t="Include" />
+            <e p="BallObject.cs" t="Include" />
             <e p="BallShadow.cs" t="Include" />
+          </e>
+          <e p="Dad" t="Include">
+            <e p="Dad.cs" t="Include" />
           </e>
           <e p="PlayerMovement" t="Include">
             <e p="PlayerMovement.cs" t="Include" />
