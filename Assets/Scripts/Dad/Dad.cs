@@ -31,7 +31,7 @@ public class Dad : MonoBehaviour
 
     private void UpdateTimeAtDestination()
     {
-        if (CheckClose(transform.position.x, moveTarget.x) && CheckClose(transform.position.z, moveTarget.z))
+        if (GetAtDestination())
         {
             timeAtDestination += Time.deltaTime;
         }
@@ -40,6 +40,7 @@ public class Dad : MonoBehaviour
             timeAtDestination = 0f;
         }
     }
+    
 
     private bool CheckClose(float a, float b)
     {
@@ -57,6 +58,11 @@ public class Dad : MonoBehaviour
         {
             moveTarget = ballObject.GetLandingSpot();
         }
+    }
+
+    public bool GetAtDestination()
+    {
+        return CheckClose(transform.position.x, moveTarget.x) && CheckClose(transform.position.z, moveTarget.z);
     }
 
     public float GetTimeAtDestination()

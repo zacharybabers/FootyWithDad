@@ -8,10 +8,14 @@ public class BallObject : MonoBehaviour
 {
     [SerializeField] private float hitHeight;
     [SerializeField] private Transform ballMeshTransform;
+    [SerializeField] private Dad dad;
     [SerializeField] private Collider playerCollider;
     [SerializeField] private float yAcceleration = -9.8f;
     [SerializeField] private float inaccuracyMultiplier = 1f;
+    [SerializeField] private float dadInaccuracyMultiplier = 1f;
+    [SerializeField] private float dadKickPrepTime = 1.5f;
     [SerializeField] private float kickPower = 40f;
+    
     
    
     private Vector3 movementDirection;
@@ -32,6 +36,7 @@ public class BallObject : MonoBehaviour
     void Update()
     {
         CheckKick();
+        CheckDadKick();
         UpdateVelocity();
         var movementVector = new Vector3(0f, verticalVelocity, 0f) + (movementDirection.normalized * horizontalVelocity);
         transform.Translate(movementVector * Time.deltaTime);
@@ -95,6 +100,48 @@ public class BallObject : MonoBehaviour
         
 
         return initMovement;
+    }
+
+    private Vector3 CalculateDadKickDirection()
+    {
+        var dissonance = dad.GetTimeAtDestination();
+        if (dissonance > dadKickPrepTime)
+        {
+            dissonance = dadKickPrepTime;
+        }
+        dissonance = dadKickPrepTime - dissonance;
+        var initMovement = playerTransform.position - dad.transform.position;
+        var movementChange = Quaternion.Euler(0, 90, 0) * initMovement;
+
+        int inaccuracyRandomizer = 1;
+        if (Random.Range(0f, 1f) > 0.5)
+        {
+            inaccuracyRandomizer = -1;
+        }
+
+        initMovement = initMovement + (movementChange * (dissonance * dadInaccuracyMultiplier * inaccuracyRandomizer));
+        
+
+        return initMovement;
+    }
+
+    private float CalculateDadKickPower()
+    {
+        var dadPosition = dad.transform.position;
+        var playerPosition = playerTransform.position;
+        float initDistance = Vector3.Distance(new Vector3(playerPosition.x, 0f, playerPosition.z), new Vector3(dadPosition.x, 0f, dadPosition.z));
+        
+    }
+
+    private void CheckDadKick()
+    {
+        if (!playerLastHit || transform.position.y >= hitHeight + .1f || transform.position.y <= hitHeight - .1f || dad.GetAtDestination() == false)
+        {
+            return;
+        }
+
+        playerLastHit = false;
+        Debug.Log("kicky kicky");
     }
 
     public float GetHitHeight()
