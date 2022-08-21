@@ -17,9 +17,9 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.6509804, g: 0.8745099, b: 0.91372555, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.003
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_FogDensity: 0.004
+  m_LinearFogStart: 115.7
+  m_LinearFogEnd: 300.88
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1401279351}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.15182161, g: 0.57985514, b: 0.8010753, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: b30ea00a4e2c1e44d934d7dd91a61b4f, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: c6ed199c494dd3b42ae94bdeba00d8ce, type: 2}
 --- !u!196 &4
 NavMeshSettings:
