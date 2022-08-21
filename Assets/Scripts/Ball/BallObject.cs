@@ -131,6 +131,11 @@ public class BallObject : MonoBehaviour
         var playerPosition = playerTransform.position;
         float initDistance = Vector3.Distance(new Vector3(playerPosition.x, 0f, playerPosition.z), new Vector3(dadPosition.x, 0f, dadPosition.z));
         
+        //change distance depending on dissonance
+        
+        var dadKickPower = Mathf.Sqrt(4.9f * initDistance);
+
+        return dadKickPower;
     }
 
     private void CheckDadKick()
@@ -139,9 +144,13 @@ public class BallObject : MonoBehaviour
         {
             return;
         }
-
-        playerLastHit = false;
+        
         Debug.Log("kicky kicky");
+        movementDirection = CalculateDadKickDirection();
+        var dadKickPower = CalculateDadKickPower();
+        verticalVelocity = dadKickPower;
+        horizontalVelocity = dadKickPower;
+        playerLastHit = false;
     }
 
     public float GetHitHeight()
