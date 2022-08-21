@@ -145,7 +145,6 @@ public class BallObject : MonoBehaviour
             return;
         }
         
-        Debug.Log("kicky kicky");
         movementDirection = CalculateDadKickDirection();
         var dadKickPower = CalculateDadKickPower();
         verticalVelocity = dadKickPower;
