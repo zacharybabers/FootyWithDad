@@ -4,21 +4,35 @@ using UnityEngine;
 
 public class AccuracyCircle : MonoBehaviour
 {
+    public bool followMode = true;
+    
     [SerializeField] private Transform ballTransform;
     [SerializeField] private float scaleFactor = 1f;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     private float hitHeight;
     private Vector3 initScale;
+    private BallObject ballObject;
     
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         initScale = transform.localScale;
         hitHeight = FindObjectOfType<BallObject>().GetHitHeight();
+        ballObject = ballTransform.GetComponent<BallObject>();
     }
     
     void Update()
     {
-        TrackBallXZ();
+        if (followMode)
+        {
+            TrackBallXZ();
+        }
+        else
+        {
+            UpdateBallAdvanced();
+        }
+        
         ScaleCircle();
     }
     
@@ -28,6 +42,20 @@ public class AccuracyCircle : MonoBehaviour
         var ballPosition = ballTransform.position;
         var newPosition = new Vector3(ballPosition.x, height, ballPosition.z);
         transform.position = newPosition;
+    }
+
+    private void UpdateBallAdvanced()
+    {
+        if (!ballObject.GetPlayerLastHit())
+        {
+            var landingSpot = ballObject.GetLandingSpot();
+            transform.position = new Vector3(landingSpot.x, transform.position.y, landingSpot.z);
+            spriteRenderer.enabled = true;
+        }
+        else
+        {
+            spriteRenderer.enabled = false;
+        }
     }
 
     private void ScaleCircle()

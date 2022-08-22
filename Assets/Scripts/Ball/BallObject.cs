@@ -22,6 +22,7 @@ public class BallObject : MonoBehaviour
     private float verticalVelocity = 0f;
     private float horizontalVelocity = 0f;
     private Transform playerTransform;
+    private ScoreKeeper scoreKeeper;
     
     private bool inPlayerRange = false;
     private bool grounded = false;
@@ -30,6 +31,7 @@ public class BallObject : MonoBehaviour
     void Start()
     {
         playerTransform = playerCollider.transform;
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -81,6 +83,7 @@ public class BallObject : MonoBehaviour
         movementDirection = CalculateKickDirection();
         horizontalVelocity = kickPower;
         verticalVelocity = kickPower;
+        scoreKeeper.AddScore(1);
         playerLastHit = true;
     }
 
@@ -149,6 +152,7 @@ public class BallObject : MonoBehaviour
         var dadKickPower = CalculateDadKickPower();
         verticalVelocity = dadKickPower;
         horizontalVelocity = dadKickPower;
+        scoreKeeper.AddScore(1);
         playerLastHit = false;
     }
 
@@ -173,12 +177,23 @@ public class BallObject : MonoBehaviour
         {
             timeToLand = ((b * -1f) - Mathf.Sqrt(Mathf.Pow(b, 2) - (4 * a * c))) / (2f * a);
         }
-
-        return timeToLand * horizontalVelocity * movementDirection + new Vector3(transform.position.x, 0f, transform.position.z);
+        
+        return timeToLand * horizontalVelocity * movementDirection.normalized + new Vector3(transform.position.x, 0f, transform.position.z);
     }
 
     public bool GetPlayerLastHit()
     {
         return playerLastHit;
+    }
+
+    public Vector3 GetRotationAxis()
+    {
+        var newDirection = Quaternion.Euler(0, 90, 0) * movementDirection;
+        return newDirection;
+    }
+
+    public float GetHorizontalVelocity()
+    {
+        return horizontalVelocity;
     }
 }

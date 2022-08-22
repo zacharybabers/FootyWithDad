@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="34c889e1-9f0d-4500-8af8-049f1e2b3062" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/AccuracyCircle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/AccuracyCircle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +34,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/BallRotator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LandingTester.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dad/Dad.cs" root0="FORCE_HIGHLIGHTING" />
@@ -23,8 +45,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallShadow.cs" />
         <option value="$PROJECT_DIR$/Assets/LandingTester.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ball/AccuracyCircle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dad/Dad.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameState/ScoreKeeper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallRotator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ball/AccuracyCircle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" />
       </list>
     </option>
@@ -77,6 +101,7 @@
       <workItem from="1660363302381" duration="18320000" />
       <workItem from="1660967809908" duration="5732000" />
       <workItem from="1661073158502" duration="1664000" />
+      <workItem from="1661156120778" duration="3416000" />
     </task>
     <servers />
   </component>
@@ -85,6 +110,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
