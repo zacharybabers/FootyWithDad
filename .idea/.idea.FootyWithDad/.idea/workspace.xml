@@ -22,8 +22,8 @@
     <list default="true" id="34c889e1-9f0d-4500-8af8-049f1e2b3062" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/AccuracyCircle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/AccuracyCircle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +42,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallShadow.cs" />
         <option value="$PROJECT_DIR$/Assets/LandingTester.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dad/Dad.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState/ScoreKeeper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallRotator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ball/AccuracyCircle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameState/SoundPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" />
       </list>
     </option>
   </component>
@@ -102,6 +103,7 @@
       <workItem from="1660967809908" duration="5732000" />
       <workItem from="1661073158502" duration="1664000" />
       <workItem from="1661156120778" duration="3416000" />
+      <workItem from="1661232894848" duration="2449000" />
     </task>
     <servers />
   </component>
@@ -120,6 +122,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

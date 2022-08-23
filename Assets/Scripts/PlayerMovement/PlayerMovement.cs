@@ -7,7 +7,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
     [SerializeField] private float movementSpeed = 10f;
+    [SerializeField] private float slowedSpeed = 4f;
     private CharacterController characterController;
+
+    private bool slowed = false;
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -17,11 +20,29 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         transform.LookAt(GetLookPosition());
+        UpdateSlowedInput();
         DoMovement();
+    }
+
+    private void UpdateSlowedInput()
+    {
+        if (Input.GetButton("Slow"))
+        {
+            slowed = true;
+        }
+        else
+        {
+            slowed = false;
+        }
     }
 
     private void DoMovement()
     {
+        var finalMoveSpeed = movementSpeed;
+        if (slowed)
+        {
+            finalMoveSpeed = slowedSpeed;
+        }
         var inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         var camTransform = mainCamera.transform;
         var flatForward = camTransform.forward;
@@ -29,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         var flatRight = camTransform.right;
         flatRight.y = 0;
         var movementVector = flatRight.normalized + flatForward.normalized;
-        movementVector *= movementSpeed * Time.deltaTime;
+        movementVector *= finalMoveSpeed * Time.deltaTime;
         movementVector.x *= inputVector.x;
         movementVector.z *= inputVector.y;
         characterController.Move(movementVector);

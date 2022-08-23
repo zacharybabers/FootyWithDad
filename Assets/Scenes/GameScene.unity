@@ -445,6 +445,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 16a70fa0e3c56a844a291eac25a93e5b, type: 3}
   m_PrefabInstance: {fileID: 1481034115}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &602174833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 602174835}
+  - component: {fileID: 602174834}
+  m_Layer: 0
+  m_Name: AudioPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &602174834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602174833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0b2b5be0dc0e841b4dcdd3c20ad131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballAudioSource: {fileID: 1901027573}
+  kickClips:
+  - {fileID: 8300000, guid: 4801036a7534743499f8b1c0b5b13a08, type: 3}
+  - {fileID: 8300000, guid: 02b80e57cce086b41bb927bdafee414d, type: 3}
+  - {fileID: 8300000, guid: 1ca5725a699b2a741aaccd557dabbcac, type: 3}
+  - {fileID: 8300000, guid: 9e87bb9b51b22664298978a0458a3f65, type: 3}
+  - {fileID: 8300000, guid: 9a51aef0214115e4da53b547f4a9068f, type: 3}
+  - {fileID: 8300000, guid: 840123720e4ed9745ac91b4699b421d9, type: 3}
+  - {fileID: 8300000, guid: 4d30884595ec76249b01c76fe38db90f, type: 3}
+  - {fileID: 8300000, guid: 8d96c81466b7ada4ba95b803b5917848, type: 3}
+--- !u!4 &602174835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602174833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.55616, y: 7.1901565, z: 4.693655}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &762162003
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballObject: {fileID: 1901027570}
-  moveSpeed: 5
+  moveSpeed: 6
 --- !u!54 &762162009
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1121,7 +1174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668303739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.309708, y: -0.11130384, z: 19.352875}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1974372024}
@@ -1301,6 +1354,7 @@ GameObject:
   - component: {fileID: 1901027572}
   - component: {fileID: 1901027571}
   - component: {fileID: 1901027570}
+  - component: {fileID: 1901027573}
   m_Layer: 0
   m_Name: Soccer Object
   m_TagString: Untagged
@@ -1316,7 +1370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901027568}
   m_LocalRotation: {x: -0, y: -0.000000014901161, z: -0, w: 1}
-  m_LocalPosition: {x: 11.52, y: 7.65, z: -14.29}
+  m_LocalPosition: {x: 36.99, y: 7.65, z: 5.33}
   m_LocalScale: {x: 40, y: 40, z: 40}
   m_Children:
   - {fileID: 433033635}
@@ -1340,7 +1394,7 @@ MonoBehaviour:
   dad: {fileID: 762162008}
   playerCollider: {fileID: 1434607576}
   yAcceleration: -9.8
-  inaccuracyMultiplier: 0.3
+  inaccuracyMultiplier: 0.15
   dadInaccuracyMultiplier: 0.5
   dadKickPrepTime: 1.5
   kickPower: 14
@@ -1373,6 +1427,102 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.03
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &1901027573
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901027568}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1974372023
 GameObject:
   m_ObjectHideFlags: 0

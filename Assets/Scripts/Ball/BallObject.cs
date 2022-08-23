@@ -23,6 +23,7 @@ public class BallObject : MonoBehaviour
     private float horizontalVelocity = 0f;
     private Transform playerTransform;
     private ScoreKeeper scoreKeeper;
+    private SoundPlayer soundPlayer;
     
     private bool inPlayerRange = false;
     private bool grounded = false;
@@ -32,6 +33,7 @@ public class BallObject : MonoBehaviour
     {
         playerTransform = playerCollider.transform;
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        soundPlayer = FindObjectOfType<SoundPlayer>();
     }
 
     // Update is called once per frame
@@ -75,7 +77,7 @@ public class BallObject : MonoBehaviour
 
     private void CheckKick()
     {
-        if(!Input.GetButtonUp("Kick") || !inPlayerRange || grounded)
+        if(!Input.GetButtonDown("Kick") || !inPlayerRange || grounded)
         {
             return;
         }
@@ -84,6 +86,7 @@ public class BallObject : MonoBehaviour
         horizontalVelocity = kickPower;
         verticalVelocity = kickPower;
         scoreKeeper.AddScore(1);
+        soundPlayer.PlayRandomKick();
         playerLastHit = true;
     }
 
@@ -136,7 +139,7 @@ public class BallObject : MonoBehaviour
         
         //change distance depending on dissonance
         
-        var dadKickPower = Mathf.Sqrt(4.9f * initDistance);
+        var dadKickPower = Mathf.Sqrt(-1f * (yAcceleration / 2f) * initDistance);
 
         return dadKickPower;
     }
@@ -153,6 +156,7 @@ public class BallObject : MonoBehaviour
         verticalVelocity = dadKickPower;
         horizontalVelocity = dadKickPower;
         scoreKeeper.AddScore(1);
+        soundPlayer.PlayRandomKick();
         playerLastHit = false;
     }
 
