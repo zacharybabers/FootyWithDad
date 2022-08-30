@@ -6,6 +6,7 @@ public class Dad : MonoBehaviour
 {
     [SerializeField] private BallObject ballObject;
     [SerializeField] private float moveSpeed = 12f;
+    [SerializeField] private float targetTolerance = 1f;
 
     private Vector3 moveTarget;
     private float timeAtDestination;
@@ -44,7 +45,7 @@ public class Dad : MonoBehaviour
 
     private bool CheckClose(float a, float b)
     {
-        if (a - 1f <= b && a + 1f >= b)
+        if (a - targetTolerance <= b && a + targetTolerance >= b)
         {
             return true;
         }
