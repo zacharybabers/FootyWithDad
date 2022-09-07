@@ -22,13 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34c889e1-9f0d-4500-8af8-049f1e2b3062" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerCircle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerCircle.cs" afterDir="false" />
-    </list>
+    <list default="true" id="34c889e1-9f0d-4500-8af8-049f1e2b3062" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +108,7 @@
       <workItem from="1661723585387" duration="2685000" />
       <workItem from="1662263343785" duration="2216000" />
       <workItem from="1662349461407" duration="1220000" />
-      <workItem from="1662532428687" duration="1825000" />
+      <workItem from="1662532428687" duration="2133000" />
     </task>
     <servers />
   </component>

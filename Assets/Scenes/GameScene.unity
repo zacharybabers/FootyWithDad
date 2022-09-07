@@ -1555,9 +1555,10 @@ MonoBehaviour:
   dadKickPrepTime: 1.5
   kickPower: 14
   playerCircleShiftTime: 0.5
-  playerCircleGoodColor: {r: 0.7490196, g: 1, b: 0.39215687, a: 0}
-  playerCircleBadColor: {r: 0.31764707, g: 0.4627451, b: 0.07450981, a: 0}
-  playerCircleMissColor: {r: 0.43529412, g: 0.43529412, b: 0.43529412, a: 0}
+  goodKickDissonance: 0.3
+  playerCircleGoodColor: {r: 0.7490196, g: 1, b: 0.39215687, a: 1}
+  playerCircleBadColor: {r: 0.31764707, g: 0.4627451, b: 0.07450981, a: 1}
+  playerCircleMissColor: {r: 0.43529412, g: 0.43529412, b: 0.43529412, a: 1}
 --- !u!54 &1901027571
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1897,6 +1898,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: e679c66c9ba1bed41a97fb0a66f7df1b, type: 3}
+    - target: {fileID: 1811730814, guid: 4e66fefe59b40c042b7086d50dce4897, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9843137
+      objectReference: {fileID: 0}
     - target: {fileID: 1811730814, guid: 4e66fefe59b40c042b7086d50dce4897, type: 3}
       propertyPath: m_Color.b
       value: 1
