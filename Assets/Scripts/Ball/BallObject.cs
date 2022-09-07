@@ -9,15 +9,21 @@ public class BallObject : MonoBehaviour
     [SerializeField] private float hitHeight;
     [SerializeField] private Transform ballMeshTransform;
     [SerializeField] private Dad dad;
+    [SerializeField] private PlayerCircle playerCircle;
     [SerializeField] private Collider playerCollider;
     [SerializeField] private float yAcceleration = -9.8f;
     [SerializeField] private float inaccuracyMultiplier = 1f;
     [SerializeField] private float dadInaccuracyMultiplier = 1f;
     [SerializeField] private float dadKickPrepTime = 1.5f;
     [SerializeField] private float kickPower = 40f;
-    
-    
-   
+    [SerializeField] private float playerCircleShiftTime = 1f;
+    [SerializeField] private float goodKickDissonance = 0.3f;
+    [SerializeField] private Color playerCircleGoodColor;
+    [SerializeField] private Color playerCircleBadColor;
+    [SerializeField] private Color playerCircleMissColor;
+
+
+
     private Vector3 movementDirection;
     private float verticalVelocity = 0f;
     private float horizontalVelocity = 0f;
@@ -77,8 +83,13 @@ public class BallObject : MonoBehaviour
 
     private void CheckKick()
     {
-        if(!Input.GetButtonDown("Kick") || !inPlayerRange || grounded)
+        if (!Input.GetButtonDown("Kick"))
         {
+            return;
+        }
+        if(!inPlayerRange || grounded)
+        {
+            playerCircle.ColorShift(playerCircleMissColor, playerCircleShiftTime);
             return;
         }
 
@@ -100,6 +111,15 @@ public class BallObject : MonoBehaviour
         if (Random.Range(0f, 1f) > 0.5)
         {
             inaccuracyRandomizer = -1;
+        }
+
+        if (heightDissonance <= goodKickDissonance)
+        {
+            playerCircle.ColorShift(playerCircleGoodColor, playerCircleShiftTime);
+        }
+        else
+        {
+            playerCircle.ColorShift(playerCircleBadColor, playerCircleShiftTime);
         }
 
         initMovement = initMovement + (movementChange * (heightDissonance * inaccuracyMultiplier * inaccuracyRandomizer));

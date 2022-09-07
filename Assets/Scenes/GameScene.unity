@@ -735,7 +735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.81122226}
   m_AnchorMax: {x: 0.19720834, y: 1}
-  m_AnchoredPosition: {x: -24.362427, y: 2.178833}
+  m_AnchoredPosition: {x: -24.362549, y: 2.178833}
   m_SizeDelta: {x: -48.7248, y: -4.3576965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1019394001
@@ -1547,12 +1547,17 @@ MonoBehaviour:
   hitHeight: 1
   ballMeshTransform: {fileID: 433033635}
   dad: {fileID: 762162008}
+  playerCircle: {fileID: 107467855640527442}
   playerCollider: {fileID: 1434607576}
   yAcceleration: -9.8
   inaccuracyMultiplier: 0.15
   dadInaccuracyMultiplier: 0.5
   dadKickPrepTime: 1.5
   kickPower: 14
+  playerCircleShiftTime: 0.5
+  playerCircleGoodColor: {r: 0.7490196, g: 1, b: 0.39215687, a: 0}
+  playerCircleBadColor: {r: 0.31764707, g: 0.4627451, b: 0.07450981, a: 0}
+  playerCircleMissColor: {r: 0.43529412, g: 0.43529412, b: 0.43529412, a: 0}
 --- !u!54 &1901027571
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1962,3 +1967,26 @@ PrefabInstance:
       objectReference: {fileID: 1819014952}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e66fefe59b40c042b7086d50dce4897, type: 3}
+--- !u!212 &107467855640527440 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1811730814, guid: 4e66fefe59b40c042b7086d50dce4897, type: 3}
+  m_PrefabInstance: {fileID: 107467855640527439}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &107467855640527441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1811730812, guid: 4e66fefe59b40c042b7086d50dce4897, type: 3}
+  m_PrefabInstance: {fileID: 107467855640527439}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &107467855640527442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107467855640527441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763a5fe441ef24ccfbe461370a504cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circleSprite: {fileID: 107467855640527440}
