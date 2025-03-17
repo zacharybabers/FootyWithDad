@@ -21,6 +21,7 @@ public class BallObject : MonoBehaviour
     [SerializeField] private Color playerCircleGoodColor;
     [SerializeField] private Color playerCircleBadColor;
     [SerializeField] private Color playerCircleMissColor;
+    [SerializeField] private bool debugMode;
 
 
 
@@ -43,7 +44,7 @@ public class BallObject : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         CheckKick();
         CheckDadKick();
@@ -177,6 +178,10 @@ public class BallObject : MonoBehaviour
         horizontalVelocity = dadKickPower;
         scoreKeeper.AddScore(1);
         soundPlayer.PlayRandomKick();
+        if (debugMode)
+        {
+            Debug.Log("dad kicked");
+        }
         playerLastHit = false;
     }
 
