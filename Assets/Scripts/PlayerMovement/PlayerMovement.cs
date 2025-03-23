@@ -9,11 +9,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private float slowedSpeed = 4f;
     private CharacterController characterController;
+    private Vector3 startPosition;
 
     private bool slowed = false;
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        startPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -67,5 +69,10 @@ public class PlayerMovement : MonoBehaviour
 
         result.y = transform.position.y;
         return result;
+    }
+
+    public void ResetPlayer()
+    {
+        transform.position = startPosition;
     }
 }

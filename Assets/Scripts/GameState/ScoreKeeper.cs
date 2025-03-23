@@ -22,9 +22,22 @@ public class ScoreKeeper : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    public void AddScore(int scoreToAdd)
+    public int AddScore(int scoreToAdd)
     {
         score += scoreToAdd;
+        return score;
+    }
+
+    public void SetScore(int newScore)
+    {
+        score = newScore;
+    }
+
+    public int ResetScore()
+    {
+        var lastScore = score;
+        SetScore(0);
+        return lastScore;
     }
 
     public int GetScore()

@@ -18,6 +18,7 @@ public class BallObject : MonoBehaviour
     [SerializeField] private float kickPower = 40f;
     [SerializeField] private float playerCircleShiftTime = 1f;
     [SerializeField] private float goodKickDissonance = 0.3f;
+    [SerializeField] private float deadTime = 1.5f;
     [SerializeField] private Color playerCircleGoodColor;
     [SerializeField] private Color playerCircleBadColor;
     [SerializeField] private Color playerCircleMissColor;
@@ -26,10 +27,13 @@ public class BallObject : MonoBehaviour
 
 
     private Vector3 movementDirection;
+    private Vector3 startPosition;
     private float verticalVelocity = 0f;
     private float horizontalVelocity = 0f;
+    private float activeDeadTime = 0f;
     private Transform playerTransform;
     private ScoreKeeper scoreKeeper;
+    private GameKeeper gameKeeper;
     private SoundPlayer soundPlayer;
     
     private bool inPlayerRange = false;
@@ -39,8 +43,10 @@ public class BallObject : MonoBehaviour
     void Start()
     {
         playerTransform = playerCollider.transform;
+        startPosition = transform.position;
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         soundPlayer = FindObjectOfType<SoundPlayer>();
+        gameKeeper = FindObjectOfType<GameKeeper>();
     }
 
     // Update is called once per frame
@@ -58,6 +64,15 @@ public class BallObject : MonoBehaviour
             transform.position = pos;
             horizontalVelocity = 0f;
             grounded = true;
+        }
+
+        if (grounded)
+        {
+            activeDeadTime += Time.deltaTime;
+            if (activeDeadTime >= deadTime)
+            {
+                gameKeeper.ResetGame();
+            }
         }
     }
 
@@ -224,5 +239,16 @@ public class BallObject : MonoBehaviour
     public float GetHorizontalVelocity()
     {
         return horizontalVelocity;
+    }
+
+    public void ResetBall()
+    {
+        activeDeadTime = 0f;
+        verticalVelocity = 0f;
+        horizontalVelocity = 0f;
+        inPlayerRange = false;
+        grounded = false;
+        playerLastHit = false;
+        transform.position = startPosition;
     }
 }
