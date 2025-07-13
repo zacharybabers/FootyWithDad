@@ -39,7 +39,7 @@ public class BallObject : MonoBehaviour
     private bool inPlayerRange = false;
     private bool grounded = false;
     private bool playerLastHit = false;
-    
+
     void Start()
     {
         playerTransform = playerCollider.transform;
@@ -108,7 +108,7 @@ public class BallObject : MonoBehaviour
             playerCircle.ColorShift(playerCircleMissColor, playerCircleShiftTime);
             return;
         }
-
+        
         movementDirection = CalculateKickDirection();
         horizontalVelocity = kickPower;
         verticalVelocity = kickPower;
