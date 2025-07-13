@@ -114,7 +114,7 @@ public class BallObject : MonoBehaviour
         verticalVelocity = kickPower;
         scoreKeeper.AddScore(1);
         soundPlayer.PlayRandomKick();
-        playerLastHit = true;
+        StartCoroutine(UpdatePlayerHit());
     }
 
     private Vector3 CalculateKickDirection()
@@ -250,5 +250,15 @@ public class BallObject : MonoBehaviour
         grounded = false;
         playerLastHit = false;
         transform.position = startPosition;
+    }
+
+    private IEnumerator UpdatePlayerHit()
+    {
+        while (transform.position.y < hitHeight + 1f)
+        {
+            yield return null;
+        }
+
+        playerLastHit = true;
     }
 }
