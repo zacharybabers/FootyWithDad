@@ -56,8 +56,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState/SoundPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerCircle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraPivot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" />
       </list>
     </option>
   </component>
@@ -119,7 +119,7 @@
       <workItem from="1662768213899" duration="595000" />
       <workItem from="1741675520184" duration="3352000" />
       <workItem from="1742230583924" duration="5306000" />
-      <workItem from="1752382237456" duration="2513000" />
+      <workItem from="1752382237456" duration="3203000" />
     </task>
     <servers />
   </component>
