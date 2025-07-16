@@ -35,6 +35,7 @@ public class BallObject : MonoBehaviour
     private ScoreKeeper scoreKeeper;
     private GameKeeper gameKeeper;
     private SoundPlayer soundPlayer;
+    private PlayerMovement playerMovement;
     
     private bool inPlayerRange = false;
     private bool grounded = false;
@@ -42,6 +43,7 @@ public class BallObject : MonoBehaviour
 
     void Start()
     {
+        playerMovement = FindObjectOfType<PlayerMovement>();
         playerTransform = playerCollider.transform;
         startPosition = transform.position;
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
@@ -193,6 +195,7 @@ public class BallObject : MonoBehaviour
         horizontalVelocity = dadKickPower;
         scoreKeeper.AddScore(1);
         soundPlayer.PlayRandomKick();
+        playerMovement.UpdateCamTransform();
         if (debugMode)
         {
             Debug.Log("dad kicked");
@@ -258,7 +261,7 @@ public class BallObject : MonoBehaviour
         {
             yield return null;
         }
-
+        
         playerLastHit = true;
     }
 }

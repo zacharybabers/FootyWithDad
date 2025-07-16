@@ -11,14 +11,18 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController characterController;
     private Vector3 startPosition;
 
+    private CamTransform camTransform;
+
     private bool slowed = false;
     void Awake()
     {
         characterController = GetComponent<CharacterController>();
         startPosition = transform.position;
+        camTransform = new CamTransform();
+        UpdateCamTransform();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         transform.LookAt(GetLookPosition());
@@ -46,11 +50,8 @@ public class PlayerMovement : MonoBehaviour
             finalMoveSpeed = slowedSpeed;
         }
         var inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        var camTransform = mainCamera.transform;
-        var flatForward = camTransform.forward;
-        flatForward.y = 0;
-        var flatRight = camTransform.right;
-        flatRight.y = 0;
+        var flatForward = camTransform.camFlatForward;
+        var flatRight = camTransform.camFlatRight;
         var movementVector = flatRight.normalized + flatForward.normalized;
         movementVector *= finalMoveSpeed * Time.deltaTime;
         movementVector.x *= inputVector.x;
@@ -74,5 +75,21 @@ public class PlayerMovement : MonoBehaviour
     public void ResetPlayer()
     {
         transform.position = startPosition;
+    }
+
+    public void UpdateCamTransform()
+    {
+        // Update cam transform and flatten
+        camTransform.camFlatForward = mainCamera.transform.forward;
+        camTransform.camFlatForward.y = 0;
+        
+        camTransform.camFlatRight = mainCamera.transform.right;
+        camTransform.camFlatForward.y = 0;
+    }
+    
+    private struct CamTransform
+    {
+        public Vector3 camFlatForward;
+        public Vector3 camFlatRight;
     }
 }

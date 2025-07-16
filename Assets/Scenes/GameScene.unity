@@ -1731,7 +1731,7 @@ MonoBehaviour:
   playerCircleGoodColor: {r: 0.7490196, g: 1, b: 0.39215687, a: 1}
   playerCircleBadColor: {r: 0.31764707, g: 0.4627451, b: 0.07450981, a: 1}
   playerCircleMissColor: {r: 0.43529412, g: 0.43529412, b: 0.43529412, a: 1}
-  debugMode: 1
+  debugMode: 0
 --- !u!54 &1901027571
 Rigidbody:
   m_ObjectHideFlags: 0
