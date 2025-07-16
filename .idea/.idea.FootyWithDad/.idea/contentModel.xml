@@ -17,6 +17,7 @@
           </e>
           <e p="Camera" t="Include">
             <e p="CameraPivot.cs" t="Include" />
+            <e p="MenuRotate.cs" t="Include" />
           </e>
           <e p="Dad" t="Include">
             <e p="Dad.cs" t="Include" />
@@ -31,6 +32,7 @@
             <e p="PlayerCircle.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
           </e>
+          <e p="SceneLoader.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
         </e>
         <e p="SimpleCumulus" t="Include">

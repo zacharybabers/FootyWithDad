@@ -246,13 +246,7 @@ public class BallObject : MonoBehaviour
 
     public void ResetBall()
     {
-        activeDeadTime = 0f;
-        verticalVelocity = 0f;
-        horizontalVelocity = 0f;
-        inPlayerRange = false;
-        grounded = false;
-        playerLastHit = false;
-        transform.position = startPosition;
+        SceneLoader.Instance.LoadEndMenu();
     }
 
     private IEnumerator UpdatePlayerHit()
