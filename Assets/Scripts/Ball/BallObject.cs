@@ -6,16 +6,18 @@ using Random = UnityEngine.Random;
 
 public class BallObject : MonoBehaviour
 {
+    public float yAcceleration = -9.8f;
+    public float kickPower = 14f;
+    
+    
     [SerializeField] private float hitHeight;
     [SerializeField] private Transform ballMeshTransform;
     [SerializeField] private Dad dad;
     [SerializeField] private PlayerCircle playerCircle;
     [SerializeField] private Collider playerCollider;
-    [SerializeField] private float yAcceleration = -9.8f;
     [SerializeField] private float inaccuracyMultiplier = 1f;
     [SerializeField] private float dadInaccuracyMultiplier = 1f;
     [SerializeField] private float dadKickPrepTime = 1.5f;
-    [SerializeField] private float kickPower = 40f;
     [SerializeField] private float playerCircleShiftTime = 1f;
     [SerializeField] private float goodKickDissonance = 0.3f;
     [SerializeField] private float deadTime = 1.5f;

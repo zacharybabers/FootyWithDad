@@ -25,13 +25,7 @@
     <list default="true" id="34c889e1-9f0d-4500-8af8-049f1e2b3062" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExampleAssets/Materials/Paint1G_WAnim_Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExampleAssets/Materials/Paint1G_WAnim_Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Green.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +41,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerCircle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraPivot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState/DifficultyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LandingTester.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dad/Dad.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -67,6 +62,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameState/DifficultyManager.cs" />
       </list>
     </option>
   </component>
@@ -130,7 +126,8 @@
       <workItem from="1742230583924" duration="5306000" />
       <workItem from="1752382237456" duration="3203000" />
       <workItem from="1752645633801" duration="1323000" />
-      <workItem from="1752650621173" duration="1296000" />
+      <workItem from="1752650621173" duration="1947000" />
+      <workItem from="1752721044433" duration="1668000" />
     </task>
     <servers />
   </component>

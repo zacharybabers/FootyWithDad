@@ -1311,6 +1311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1470648860}
   - component: {fileID: 1470648859}
+  - component: {fileID: 1470648861}
   m_Layer: 0
   m_Name: GameKeeper
   m_TagString: Untagged
@@ -1344,6 +1345,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1470648861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470648858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6bb1f04bd41b234aa651d6d9d7f96a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gMin: -9.8
+  gMax: -9.8
+  gSteepness: 0.1
+  kMin: 14
+  kMax: 14
+  kSteepness: 0.1
+  tMid: 40
 --- !u!1001 &1481034115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1758,16 +1778,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd26f810b62a9545ac4d9e3ab608729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yAcceleration: -9.8
+  kickPower: 14
   hitHeight: 1
   ballMeshTransform: {fileID: 433033635}
   dad: {fileID: 762162008}
   playerCircle: {fileID: 107467855640527442}
   playerCollider: {fileID: 1434607576}
-  yAcceleration: -9.8
   inaccuracyMultiplier: 0.15
   dadInaccuracyMultiplier: 0.5
   dadKickPrepTime: 1.5
-  kickPower: 14
   playerCircleShiftTime: 0.5
   goodKickDissonance: 0.5
   deadTime: 1.5

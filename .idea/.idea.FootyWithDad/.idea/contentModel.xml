@@ -24,6 +24,7 @@
           </e>
           <e p="GameState" t="Include">
             <e p="DebugTextManager.cs" t="Include" />
+            <e p="DifficultyManager.cs" t="Include" />
             <e p="GameKeeper.cs" t="Include" />
             <e p="ScoreKeeper.cs" t="Include" />
             <e p="SoundPlayer.cs" t="Include" />
