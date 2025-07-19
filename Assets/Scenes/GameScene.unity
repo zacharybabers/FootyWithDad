@@ -2259,7 +2259,7 @@ MonoBehaviour:
   kMin: 14
   kMax: 22
   kSteepness: 0.1
-  tMid: 20
+  tMid: 10
 --- !u!114 &1470648862
 MonoBehaviour:
   m_ObjectHideFlags: 0

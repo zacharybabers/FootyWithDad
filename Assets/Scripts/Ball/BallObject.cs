@@ -73,7 +73,11 @@ public class BallObject : MonoBehaviour
             }
             return;
         }
-        CheckKick();
+
+        if (tutorialDone)
+        {
+            CheckKick();
+        }
         CheckDadKick();
         UpdateVelocity();
         var movementVector = new Vector3(0f, verticalVelocity, 0f) + (movementDirection.normalized * horizontalVelocity);
