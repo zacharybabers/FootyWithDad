@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -39,9 +40,16 @@ public class BallObject : MonoBehaviour
     private SoundPlayer soundPlayer;
     private PlayerMovement playerMovement;
     
+    
     private bool inPlayerRange = false;
     private bool grounded = false;
     private bool playerLastHit = false;
+
+    private bool tutorialDone = false;
+    private bool kickTutorialStarted = false;
+    
+    private const float moveTutorialDelay = 0.3f;
+    private const float moveTutorialDuration = 2f;
 
     void Start()
     {
@@ -56,6 +64,15 @@ public class BallObject : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        if (transform.position.y <= hitHeight && !tutorialDone)
+        {
+            if (!kickTutorialStarted)
+            {
+                StartCoroutine(KickTutorial());
+                kickTutorialStarted = true;
+            }
+            return;
+        }
         CheckKick();
         CheckDadKick();
         UpdateVelocity();
@@ -251,6 +268,11 @@ public class BallObject : MonoBehaviour
         SceneLoader.Instance.LoadEndMenu();
     }
 
+    public bool GetTutorialDone()
+    {
+        return tutorialDone;
+    }
+
     private IEnumerator UpdatePlayerHit()
     {
         while (transform.position.y < hitHeight + 1f)
@@ -259,5 +281,31 @@ public class BallObject : MonoBehaviour
         }
         
         playerLastHit = true;
+    }
+
+    private IEnumerator KickTutorial()
+    {
+        TutorialManager.Instance.FadeInKickTutorial();
+        while (!Input.GetButtonDown("Kick"))
+        {
+            yield return null;
+        }
+        TutorialManager.Instance.FadeOutKickTutorial();
+        tutorialDone = true;
+        yield return new WaitForSeconds(moveTutorialDelay);
+        StartCoroutine(MoveTutorial());
+    }
+
+    private IEnumerator MoveTutorial()
+    {
+        bool skipped = false;
+        TutorialManager.Instance.FadeInMoveTutorial();
+        yield return new WaitForSeconds(moveTutorialDuration);
+        while (Vector2.SqrMagnitude(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"))) <=
+               Mathf.Epsilon)
+        {
+            yield return null;
+        }
+        TutorialManager.Instance.FadeOutMoveTutorial();
     }
 }

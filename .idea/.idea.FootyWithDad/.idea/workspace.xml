@@ -22,7 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34c889e1-9f0d-4500-8af8-049f1e2b3062" name="Default Changelist" comment="" />
+    <list default="true" id="34c889e1-9f0d-4500-8af8-049f1e2b3062" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FootyWithDad/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +40,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/BallRotator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState/TutorialManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIFader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerCircle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraPivot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,14 +62,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState/SoundPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerCircle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraPivot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/MenuRotate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HoverColorChange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState/DifficultyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameState/DebugTextManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIFader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameState/TutorialManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ball/BallObject.cs" />
       </list>
     </option>
   </component>
@@ -127,7 +138,8 @@
       <workItem from="1752650621173" duration="1947000" />
       <workItem from="1752721044433" duration="3449000" />
       <workItem from="1752833537956" duration="246000" />
-      <workItem from="1752893793669" duration="1873000" />
+      <workItem from="1752893793669" duration="1951000" />
+      <workItem from="1752907805526" duration="3141000" />
     </task>
     <servers />
   </component>
@@ -153,9 +165,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1752650634839">
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1752909046427">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/-1920.362.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1752650634839" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/-1920.362.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1752909046427" />
   </component>
 </project>

@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 startPosition;
 
     private CamTransform camTransform;
+    private BallObject ballObject;
 
     private bool slowed = false;
     void Awake()
@@ -20,11 +21,17 @@ public class PlayerMovement : MonoBehaviour
         startPosition = transform.position;
         camTransform = new CamTransform();
         UpdateCamTransform();
+        ballObject = FindObjectOfType<BallObject>();
     }
 
     
     void Update()
     {
+        if (!ballObject.GetTutorialDone())
+        {
+            transform.LookAt(GetLookPosition());
+            return;
+        }
         transform.LookAt(GetLookPosition());
         UpdateSlowedInput();
         DoMovement();
