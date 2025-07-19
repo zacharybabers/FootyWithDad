@@ -47,20 +47,19 @@ namespace GameState
 
         private float GetGravity(int t)
         {
-            return -9.8f;
+            return EvalCurve(t, gMin, gMax, gSteepness, tMid);
         }
 
         private float GetKickPower(int t)
         {
-            return 14f;
+            return EvalCurve(t, kMin, kMax, kSteepness, tMid);
         }
-    
-        // Sample sigmoid curve
-        /*
-         * float GetGravity(int t, float gMin, float gMax, float k, float tMid) {
-        return gMin + (gMax - gMin) / (1 + Mathf.Exp(-k * (t - tMid)));
+
+
+        private float EvalCurve(int t, float min, float max, float k, float mid)
+        {
+            return min + (max - min) / (1 + Mathf.Exp(-k * (t - mid)));
         }
-         */
     }
 
 }

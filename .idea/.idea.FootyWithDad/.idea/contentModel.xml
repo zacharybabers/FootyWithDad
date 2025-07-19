@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="HoverColorChange.cs" t="Include" />
         <e p="LandingTester.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Ball" t="Include">
@@ -29,7 +30,6 @@
             <e p="ScoreKeeper.cs" t="Include" />
             <e p="SoundPlayer.cs" t="Include" />
           </e>
-          <e p="HoverColorChange.cs" t="Include" />
           <e p="PlayerMovement" t="Include">
             <e p="PlayerCircle.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
